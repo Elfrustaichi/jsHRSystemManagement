@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./js/index.js"  defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- header section start -->
+      <section id="header">
+        <h1>HR Management</h1>
+      </section>
+      <!-- header section end -->
+      <!-- table section start -->
+      <section id="table">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Salary</th>
+              <th>Position</th>
+            </tr>
+          </thead>
+          <tbody id="employeeTableBody">
+            <tr>
+              <td><input type="text" id="name" /></td>
+              <td><input type="text" id="surname" /></td>
+              <td><input type="number" id="salary" /></td>
+              <td><select id="position">
+                <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="tester">Tester</option>
+
+              </select></td>
+              <td><button onclick="addWorkers()">Add Worker</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <!-- table section end -->
+      <br />
+      <!-- sorting section start -->
+      <section id="sorting">
+        <div id="sort">
+          <label>Sort by:</label>
+          <select id="sortField" onchange="sortingWorker()">
+            <option value="name">Name</option>
+            <option value="surname">Surname</option>
+            <option value="salary">Salary</option>
+            <option value="position">Position</option>
+          </select>
+        </div>
+        <br /><br />
+        <div id="filter-salary">
+          <label>Filter by salary:</label>
+          <input type="number" id="salaryFilter" onkeyup="filterWorkers()" />
+        </div>
+        <br /><br />
+        <div id="search-name">
+          <label>Search by name or surname:</label>
+          <input type="text" id="searchTerm" onkeyup="searchingWorkers()" />
+        </div>
+        <br /><br />
+
+        <div id="filter-position">
+          <label>Filter by position:</label>
+          <select id="positionFilter" onchange="filterWorkers()">
+            <option value="">All</option>
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="tester">Tester</option>
+          </select>
+        </div>
+        <br /><br />
+      </section>
+      <!-- sorting section end -->
+
+      <!-- added elements show table start -->
+      <section id="added-elements-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Salary</th>
+              <th>Position</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody id="resultTableBody">
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
