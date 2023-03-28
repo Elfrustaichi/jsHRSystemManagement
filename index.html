@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./js/index.js"  defer></script>
+    <script src="./js/index.js" type="module"  defer></script>
   </head>
   <body>
     <main>
@@ -37,7 +37,7 @@
             <option value="tester">Tester</option>
 
               </select></td>
-              <td><button onclick="addWorkers()">Add Worker</button></td>
+              <td><button id="add-worker" >Add Worker</button></td>
             </tr>
           </tbody>
         </table>
@@ -48,7 +48,7 @@
       <section id="sorting">
         <div id="sort">
           <label>Sort by:</label>
-          <select id="sortField" onchange="sortingWorker()">
+          <select id="sortField" >
             <option value="name">Name</option>
             <option value="surname">Surname</option>
             <option value="salary">Salary</option>
@@ -58,18 +58,18 @@
         <br /><br />
         <div id="filter-salary">
           <label>Filter by salary:</label>
-          <input type="number" id="salaryFilter" onkeyup="filterWorkers()" />
+          <input type="number" id="salaryFilter" />
         </div>
         <br /><br />
         <div id="search-name">
           <label>Search by name or surname:</label>
-          <input type="text" id="searchTerm" onkeyup="searchingWorkers()" />
+          <input type="text" id="searchNameSurname"  />
         </div>
         <br /><br />
 
         <div id="filter-position">
           <label>Filter by position:</label>
-          <select id="positionFilter" onchange="filterWorkers()">
+          <select id="positionFilter" >
             <option value="">All</option>
             <option value="developer">Developer</option>
             <option value="designer">Designer</option>
